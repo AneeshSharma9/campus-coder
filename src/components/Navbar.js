@@ -31,7 +31,7 @@ function Navbar() {
                 const name = decodedToken.name || 'Unknown';
                 setFullName(name);
             } else {
-                setFullName('Unknown');
+                setFullName('Profile');
             }
         };
 
