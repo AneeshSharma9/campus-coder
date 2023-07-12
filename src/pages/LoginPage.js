@@ -1,7 +1,6 @@
 import React from 'react'
 import Login from '../components/Login';
 import { Account } from "../components/Account"
-import Status from "../components/Status"
 import Navbar from '../components/Navbar'
 
 function LoginPage() {
