@@ -30,7 +30,6 @@ function ProfilePage() {
             if (idToken) {
                 const decodedToken = JSON.parse(atob(idToken.split('.')[1]));
                 console.log(decodedToken);
-
                 const name = decodedToken.name || 'Unknown';
                 setFullName(name);
             } else {
@@ -45,8 +44,8 @@ function ProfilePage() {
         <Account>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossOrigin="anonymous" />
             <Navbar />
+            <h2>{fullName}</h2>
             <Status />
-            <h1>{fullName}</h1>
         </Account>
     )
 }

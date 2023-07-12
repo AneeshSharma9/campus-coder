@@ -1,7 +1,43 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import Status from "../components/Status"
+import Pool from '../UserPool';
 
 function Navbar() {
+    const getIdToken = () => {
+        const user = Pool.getCurrentUser();
+        if (user) {
+          return new Promise((resolve, reject) => {
+            user.getSession((err, session) => {
+              if (err) {
+                console.log('Session Error:', err);
+                reject(err);
+              } else {
+                resolve(session.getIdToken().getJwtToken());
+              }
+            });
+          });
+        }
+        return null;
+      };
+
+    const [fullName, setFullName] = useState('');
+
+    useEffect(() => {
+        const fetchFullName = async () => {
+            const idToken = await getIdToken();
+            if (idToken) {
+                const decodedToken = JSON.parse(atob(idToken.split('.')[1]));
+                console.log(decodedToken);
+                const name = decodedToken.name || 'Unknown';
+                setFullName(name);
+            } else {
+                setFullName('Unknown');
+            }
+        };
+
+        fetchFullName();
+    }, []);
+
     return (
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="/">Campus Coder</a>
@@ -21,10 +57,7 @@ function Navbar() {
                         <a class="nav-link" href="login">Log In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="profile">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <Status/>
+                        <a class="nav-link" href="profile">{fullName}</a>
                     </li>
                 </ul>
             </div>
