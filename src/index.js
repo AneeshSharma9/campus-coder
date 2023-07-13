@@ -12,6 +12,7 @@ import SignupPage from './pages/SignupPage';
 import ExplorePage from './pages/ExplorePage';
 import ProfilePage from './pages/ProfilePage';
 
+
 const router = createBrowserRouter([
   {
     path: "/",
