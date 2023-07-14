@@ -21,6 +21,7 @@ function ExplorePage() {
 
     useEffect(() => {
         fetchDataFromDynamoDb();
+        // eslint-disable-next-line
     }, []);
 
     const navigate = useNavigate();
@@ -55,7 +56,7 @@ function ExplorePage() {
                                 <h5 className="card-title">{card.name} | {card.username}</h5>
                                 <h6 className="card-title">{card.service}</h6>
                                 <p className="card-text">{card.description}</p>
-                                <a onClick={() => { toComponentB(card) }} className="btn btn-primary text-light">Request</a>
+                                <button onClick={() => { toComponentB(card) }} className="btn btn-primary text-light">Request</button>
                             </div>
                         </div>
                     ))}
