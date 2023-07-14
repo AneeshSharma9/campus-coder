@@ -21,6 +21,7 @@ function Navbar() {
 
     const [fullName, setFullName] = useState('');
     const [loginLabel, setLoginLabel] = useState('');
+    const [requestMgmtLabel, setRequestMgmtLabel] = useState('');
 
     useEffect(() => {
         const fetchFullName = async () => {
@@ -31,9 +32,11 @@ function Navbar() {
                 const name = decodedToken.name || 'Unknown';
                 setLoginLabel('');
                 setFullName(name);
+                setRequestMgmtLabel('Manage Requests')
             } else {
                 setLoginLabel('Log In');
                 setFullName('');
+                setRequestMgmtLabel('')
             }
         };
 
@@ -56,7 +59,7 @@ function Navbar() {
                         <a class="nav-link" href="explore">Explore</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="requestmgmt">Request Management</a>
+                        <a class="nav-link" href="requestmgmt">{requestMgmtLabel}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="login">{loginLabel}</a>
