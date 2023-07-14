@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Account } from '../components/Account'
 import Navbar from '../components/Navbar'
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { putData } from '../AwsFunctions';
 import Pool from '../UserPool';
 
 function RequestPage() {
     const user = Pool.getCurrentUser();
+    const navigate = useNavigate();
 
     const location = useLocation();
     const [directions, setDirections] = useState("");
@@ -25,7 +26,10 @@ function RequestPage() {
             accepted: "false"
         }
         await putData('outgoing-requests', userData)
+        navigate('../requestmgmt');
     };
+
+    
 
     return (
         <Account>
