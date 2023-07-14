@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Account } from '../components/Account'
 import Navbar from '../components/Navbar'
 import { useLocation, useNavigate } from 'react-router-dom';

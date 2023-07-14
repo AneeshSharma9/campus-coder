@@ -50,6 +50,7 @@ function RequestMgmtPage() {
 
     useEffect(() => {
         fetchDataFromDynamoDb();
+        // eslint-disable-next-line
     }, []);
 
     return (

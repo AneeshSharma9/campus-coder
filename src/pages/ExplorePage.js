@@ -14,7 +14,8 @@ function ExplorePage() {
         console.log(data.Items);
         setCardsData(data.Items);
         console.log(searchWord)
-        const filteredOutgoingData = searchWord != "" ? data.Items.filter(item => item.service == searchWord) : data.Items;
+        console.log(cardsData)
+        const filteredOutgoingData = searchWord !== "" ? data.Items.filter(item => item.service === searchWord) : data.Items;
         setOutgoingData(filteredOutgoingData);
     };
 
