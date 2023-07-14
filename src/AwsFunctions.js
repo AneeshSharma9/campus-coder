@@ -2,8 +2,8 @@ import * as AWS from 'aws-sdk'
 import { ConfigurationOptions } from 'aws-sdk'
 
 const configuration: ConfigurationOptions = {
-    secretAccessKey: SECRET_ACCESS_KEY,
-    accessKeyId: ACCESS_KEY_ID,
+    secretAccessKey: 'tTkOzUU7dL9MHIpSbJKEHvOqREEAqaZE+dKw8i9W',
+    accessKeyId: 'AKIAYVFHLCSW3WZIS7NH',
     region: 'us-east-2',
 }
 
