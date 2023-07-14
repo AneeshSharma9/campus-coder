@@ -30,12 +30,12 @@ const Login = () => {
             <h1>Log in</h1>
             <form onSubmit={onSubmit}>
                 <div className="form-group">
-                    <label htmlFor="email">Username</label>
-                    <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username" value={username} onChange={(event) => setUsername(event.target.value)} />
+                    <label htmlFor="username">Username</label>
+                    <input class="form-control" id="usernameInput" aria-describedby="usernameHelp" placeholder="Enter username" value={username} onChange={(event) => setUsername(event.target.value)} />
                 </div>
                 <div className="form-group">
                     <label htmlFor="password">Password</label>
-                    <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter password" value={password} onChange={(event) => setPassword(event.target.value)} />
+                    <input class="form-control" id="passwordInput" aria-describedby="passwordHelp" placeholder="Enter password" value={password} onChange={(event) => setPassword(event.target.value)} />
                 </div>
                 <button class="btn btn-primary" type="submit" >Login</button>
             </form>

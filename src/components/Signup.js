@@ -30,23 +30,23 @@ const Signup = () => {
             <form onSubmit={onSubmit}>
                 <div class="form-group">
                     <label htmlFor="name">Name</label>
-                    <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name" value={name} onChange={(event) => setName(event.target.value)} />
+                    <input class="form-control" id="nameInput" aria-describedby="nameHelp" placeholder="Enter name" value={name} onChange={(event) => setName(event.target.value)} />
                 </div>
                 <div class="form-group">
                     <label htmlFor="email">Email</label>
-                    <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" value={email} onChange={(event) => setEmail(event.target.value)} />
+                    <input class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email" value={email} onChange={(event) => setEmail(event.target.value)} />
                 </div>
                 <div class="form-group">
                     <label htmlFor="username">Username</label>
-                    <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username" value={username} onChange={(event) => setUsername(event.target.value)} />
+                    <input class="form-control" id="usernameInput" aria-describedby="usernameHelp" placeholder="Enter username" value={username} onChange={(event) => setUsername(event.target.value)} />
                 </div>
                 <div class="form-group">
                     <label htmlFor="phonenum">Phone Number</label>
-                    <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter phone number" value={phoneNum} onChange={(event) => setPhoneNum(event.target.value)} />
+                    <input class="form-control" id="phoneNumInput" aria-describedby="phonenumHelp" placeholder="Enter phone number" value={phoneNum} onChange={(event) => setPhoneNum(event.target.value)} />
                 </div>
                 <div class="form-group">
                     <label htmlFor="password">Password</label>
-                    <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter password" value={password} onChange={(event) => setPassword(event.target.value)} />
+                    <input class="form-control" id="passwordInput" aria-describedby="passwordHelp" placeholder="Enter password" value={password} onChange={(event) => setPassword(event.target.value)} />
                 </div>
                 <button class="btn btn-primary" type="submit">Sign Up</button>
             </form>
