@@ -2,8 +2,8 @@ import * as AWS from 'aws-sdk'
 import { ConfigurationOptions } from 'aws-sdk'
 
 const configuration: ConfigurationOptions = {
-    secretAccessKey: 'tTkOzUU7dL9MHIpSbJKEHvOqREEAqaZE+dKw8i9W',
-    accessKeyId: 'AKIAYVFHLCSW3WZIS7NH',
+    secretAccessKey: `${process.env.REACT_APP_SECRET_KEY}`,
+    accessKeyId: `${process.env.REACT_APP_ACCESS_KEY}`,
     region: 'us-east-2',
 }
 

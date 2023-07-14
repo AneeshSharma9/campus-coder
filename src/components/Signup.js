@@ -21,7 +21,8 @@ const Signup = () => {
                 console.log(data);
                 //window.location.href = "login";
             }
-        });
+        }
+        );
     };
 
     return (
