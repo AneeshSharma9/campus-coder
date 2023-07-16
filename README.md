@@ -7,6 +7,7 @@ Access front-end: https://campus-coder.netlify.app/
 Service providing small businesses with affordable software development offered by university students looking to gain experience
 
 ## 💻 Development
+ONGOING!\
 Created using React, AWS Cognito, AWS Lambda, and AWS DynamoDB\
 Hosted on Netlify
 
