@@ -53,9 +53,9 @@ function ExplorePage() {
                     {outgoingData.map((card, index) => (
                         <div class="customcard card mr-3 my-3" style={{ width: "22rem" }} key={index}>
                             <div className="card-body">
-                                <h5 className="card-title">{card.name} | {card.username}</h5>
+                                <h5 className="card-title">{card.name}</h5>
                                 <h6 className="card-title">{card.service}</h6>
-                                <p className="card-text">{card.description}</p>
+                                <p className="card-text">{card.description.length > 41 ? `${card.description.substring(0, 41)}...` : card.description}</p>
                                 <button onClick={() => { toComponentB(card) }} className="primary-button btn btn-primary text-light">Request</button>
                             </div>
                         </div>

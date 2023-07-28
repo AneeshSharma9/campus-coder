@@ -46,23 +46,23 @@ function Navbar() {
 
     return (
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="logo" href="/">Campus Coder</a>
+            <a class="logo ml-4" href="/">Campus Coder</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
+                <ul class="navbar-nav ml-auto mt-3">
+                    <li class="nav-item nav-item-style mr-4">
                         <a class="navcolor nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item nav-item-style mr-4">
                         <a class="navcolor nav-link" href="explore">Explore</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item nav-item-style mr-4">
                         <a class="navcolor nav-link" href="requestmgmt">{requestMgmtLabel}</a>
                     </li>
-                    <li class="login-button">
+                    <li class="login-button mr-4">
                         <a class="colorchange nav-link" href={loginhrefLabel}>{loginLabel}</a>
                     </li>
                 </ul>

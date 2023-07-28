@@ -24,6 +24,7 @@ const getIdToken = () => {
 };
 
 function ProfilePage() {
+    const user = Pool.getCurrentUser();
     const [fullName, setFullName] = useState('');
 
     useEffect(() => {
@@ -43,7 +44,6 @@ function ProfilePage() {
     }, []);
 
 
-    const [username, setUsername] = useState("");
     const [name, setName] = useState("");
     const [description, setDesc] = useState(null);
 
@@ -65,7 +65,7 @@ function ProfilePage() {
     const onSubmit = async () => {
         console.log('Option selected:', selected.value)
         const userData = {
-            username: username,
+            username: user.getUsername(),
             description: description,
             name: name,
             service: selected.value
@@ -81,15 +81,15 @@ function ProfilePage() {
             <div class="container">
                 <h1 class="customh1">Welcome {fullName}</h1>
                 <hr />
-                <h3>Offer services</h3>
+                <h2 class="customh2">Offer services</h2>
                 <form onSubmit={onSubmit}>
                     <div className="form-group">
                         <label htmlFor="username">Username</label>
-                        <input class="form-control" id="usernameInput" aria-describedby="emailHelp" placeholder="Enter username" value={username} onChange={(event) => setUsername(event.target.value)} />
+                        <label class="form-control alert alert-secondary" id="nameInput" aria-describedby="usernameHelp">{user.getUsername()}</label>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="name">Name</label>
-                        <input class="form-control" id="nameInput" aria-describedby="emailHelp" placeholder="Enter name" value={name} onChange={(event) => setName(event.target.value)} />
+                        <label htmlFor="name">Display Name</label>
+                        <input class="form-control" id="nameInput" aria-describedby="nameHelp" placeholder="Enter name" value={name} onChange={(event) => setName(event.target.value)} />
                     </div>
                     
                     <div className="form-group">
@@ -99,7 +99,7 @@ function ProfilePage() {
 
                     <div className="form-group">
                         <label htmlFor="description">Description</label>
-                        <input class="form-control" id="descriptionInput" aria-describedby="emailHelp" placeholder="Enter description" value={description} onChange={(event) => setDesc(event.target.value)} />
+                        <input class="form-control" maxlength="41" id="descriptionInput" aria-describedby="descriptionHelp" placeholder="Enter description" value={description} onChange={(event) => setDesc(event.target.value)} />
                     </div>
                     <button class="primary-button btn btn-primary" type="submit" >Save</button>
                 </form>

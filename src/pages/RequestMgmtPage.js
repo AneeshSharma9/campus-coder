@@ -58,9 +58,10 @@ function RequestMgmtPage() {
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossOrigin="anonymous" />
             <Navbar />
             <div class="container">
-                <h1 class="customh1">Incoming Requests</h1>
+                <h1 class="customh1">Manage Requests</h1>
+                <h2 class="customh2">Incoming Requests</h2>
                 <table class="table">
-                    <thead class="thead-dark">
+                    <thead class="table-bg">
                         <tr>
                             <th scope="col">Requester</th>
                             <th scope="col">Service</th>
@@ -99,9 +100,9 @@ function RequestMgmtPage() {
 
                 <hr />
 
-                <h1 class="customh1">Outgoing Requests</h1>
+                <h2 class="customh2">Outgoing Requests</h2>
                 <table class="table">
-                    <thead class="thead-dark">
+                    <thead class="table-bg">
                         <tr>
                             <th scope="col">Requested</th>
                             <th scope="col">Service</th>

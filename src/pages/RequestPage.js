@@ -36,7 +36,7 @@ function RequestPage() {
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossOrigin="anonymous" />
             <Navbar />
             <div class="container">
-                <h1>Requesting Service</h1>
+                <h1 class="customh1">Requesting Service</h1>
                 <form onSubmit={onSubmit}>
                     <div className="form-group">
                         <label htmlFor="name">Request for</label>
@@ -44,7 +44,7 @@ function RequestPage() {
                     </div>
                     <div className="form-group">
                         <label htmlFor="name">Requesting service from</label>
-                        <label class="form-control alert alert-secondary" id="nameInput" aria-describedby="nameHelp">{location.state.card.name} | {location.state.card.username}</label>
+                        <label class="form-control alert alert-secondary" id="nameInput" aria-describedby="nameHelp">{location.state.card.name}</label>
                     </div>
                     <div className="form-group">
                         <label htmlFor="service">Service</label>
@@ -62,8 +62,8 @@ function RequestPage() {
                         <label htmlFor="directions">Directions</label>
                         <textarea class="form-control" rows="5" id="directionsInput" aria-describedby="directionHelp" placeholder="Enter directions" value={directions} onChange={(event) => setDirections(event.target.value)} />
                     </div>
-                    <button class="btn btn-primary" type="submit" >Request</button>
-
+                    <button class="primary-button btn" type="submit" >Request</button>
+                    <a class="secondary-button btn ml-3" type="cancel" href="./explore">Cancel</a>
                 </form>
             </div>
         </Account>
