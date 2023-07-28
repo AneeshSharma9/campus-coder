@@ -5,13 +5,12 @@ import { Account } from './components/Account';
 function App() {
   return (
     <Account>
-      <div>
+      <div class="bgcolor">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossOrigin="anonymous" />
         <Navbar />
         <div class="container">
-          <h1>Campus Coder</h1>
-          <hr />
-          <p class="lead">
+          <h1 class="customh1">Campus Coder</h1>
+          <p class="introtext">
             Introducing Campus Coder!<br /><br />
             Are you a small business struggling to afford professionally done websites and automation scripts? Look no further!<br /><br />
             Imagine having access to a talented pool of computer science students, eager to take on your projects at a fraction of the price.<br /><br />

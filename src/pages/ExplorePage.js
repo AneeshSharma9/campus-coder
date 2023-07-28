@@ -36,27 +36,27 @@ function ExplorePage() {
             <Navbar />
 
             <div class="container">
-                <h2>Browse Services</h2>
+                <h1 class="customh1">Browse Services</h1>
                 <div class="d-flex">
                     <div>
                         <div class="form-inline py-3">
                             <input class="form-control mr-sm-2" type="search" placeholder="Search service" value={searchWord} aria-label="Search" onChange={(event) => setSearchWord(event.target.value)} />
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={fetchDataFromDynamoDb}>Search</button>
+                            <button class="btn btn-outline-success secondary-button my-2 my-sm-0" type="submit" onClick={fetchDataFromDynamoDb}>Search</button>
                         </div>
                     </div>
                     <div class="ml-auto p-2">
-                        <a class="btn btn-outline-success my-2 my-sm-0" href="profile">+</a>
+                        <a class="secondary-button btn btn-outline-success my-2 my-sm-0" href="profile">+</a>
                     </div>
                 </div>
 
                 <div class="d-flex flex-wrap justify-content-start py-2">
                     {outgoingData.map((card, index) => (
-                        <div class="card mr-3 my-3" style={{ width: "22rem" }} key={index}>
+                        <div class="customcard card mr-3 my-3" style={{ width: "22rem" }} key={index}>
                             <div className="card-body">
                                 <h5 className="card-title">{card.name} | {card.username}</h5>
                                 <h6 className="card-title">{card.service}</h6>
                                 <p className="card-text">{card.description}</p>
-                                <button onClick={() => { toComponentB(card) }} className="btn btn-primary text-light">Request</button>
+                                <button onClick={() => { toComponentB(card) }} className="primary-button btn btn-primary text-light">Request</button>
                             </div>
                         </div>
                     ))}

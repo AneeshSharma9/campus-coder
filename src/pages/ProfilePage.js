@@ -79,8 +79,7 @@ function ProfilePage() {
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossOrigin="anonymous" />
             <Navbar />
             <div class="container">
-                <hr />
-                <h2>Welcome {fullName}</h2>
+                <h1 class="customh1">Welcome {fullName}</h1>
                 <hr />
                 <h3>Offer services</h3>
                 <form onSubmit={onSubmit}>
@@ -102,7 +101,7 @@ function ProfilePage() {
                         <label htmlFor="description">Description</label>
                         <input class="form-control" id="descriptionInput" aria-describedby="emailHelp" placeholder="Enter description" value={description} onChange={(event) => setDesc(event.target.value)} />
                     </div>
-                    <button class="btn btn-primary" type="submit" >Save</button>
+                    <button class="primary-button btn btn-primary" type="submit" >Save</button>
                 </form>
                 <hr />
                 <Status />

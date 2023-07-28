@@ -27,7 +27,7 @@ const Login = () => {
 
     return (
         <div class="container">
-            <h1>Log in</h1>
+            <h1 class="customh1">Log in</h1>
             <form onSubmit={onSubmit}>
                 <div className="form-group">
                     <label htmlFor="username">Username</label>
@@ -37,9 +37,9 @@ const Login = () => {
                     <label htmlFor="password">Password</label>
                     <input class="form-control" id="passwordInput" aria-describedby="passwordHelp" placeholder="Enter password" value={password} onChange={(event) => setPassword(event.target.value)} />
                 </div>
-                <button class="btn btn-primary" type="submit" >Login</button>
+                <button class="login-button btn" type="submit" >Login</button>
             </form>
-            <a href="signUp">Create an account</a>
+            <a class="createacc" href="signUp">Create an account</a>
             {error && ( 
                 <div className="alert alert-danger" role="alert">
                     {error.message}
