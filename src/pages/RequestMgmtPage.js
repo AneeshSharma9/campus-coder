@@ -3,6 +3,7 @@ import { Account } from '../components/Account'
 import Navbar from '../components/Navbar'
 import { fetchData, deleteData, updateData } from '../AwsFunctions';
 import Pool from '../UserPool';
+import { useNavigate } from 'react-router-dom';
 
 
 function RequestMgmtPage() {
@@ -53,6 +54,12 @@ function RequestMgmtPage() {
         // eslint-disable-next-line
     }, []);
 
+    const navigate = useNavigate();
+
+    const toComponentB = (username) => {
+        navigate('/chat', { state: { username } });
+    }
+
     return (
         <Account>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossOrigin="anonymous" />
@@ -68,6 +75,7 @@ function RequestMgmtPage() {
                             <th scope="col">Directions</th>
                             <th scope="col">End Date</th>
                             <th scope="col">Contact</th>
+                            <th scope="col">Chat</th>
                             <th scope="col">Accepted</th>
                         </tr>
                     </thead>
@@ -82,7 +90,11 @@ function RequestMgmtPage() {
                                         <label>N/A until accepted</label>
                                     ) : (
                                         <label>{item.contact}</label>
-                                    )}</td>
+                                    )}
+                                </td>
+                                <td>
+                                    <button onClick={() => { toComponentB(item.username) }} className="secondary-button btn">Chat</button>
+                                </td>
                                 <td>
                                     {item.accepted === "false" ? (
                                         <>
@@ -109,6 +121,7 @@ function RequestMgmtPage() {
                             <th scope="col">Directions</th>
                             <th scope="col">End Date</th>
                             <th scope="col">Accepted</th>
+                            <th scope="col">Chat</th>
                             <th scope="col">Delete</th>
                         </tr>
                     </thead>
@@ -120,6 +133,9 @@ function RequestMgmtPage() {
                                 <td>{item.directions}</td>
                                 <td>{item.endDate}</td>
                                 <td>{item.accepted}</td>
+                                <td>
+                                    <button onClick={() => { toComponentB(item.requested) }} className="secondary-button btn">Chat</button>
+                                </td>
                                 <td><button onClick={() => handleDelete(item.username)} class="btn btn-outline-danger">❌</button></td>
                             </tr>
                         ))}

@@ -13,6 +13,7 @@ import ExplorePage from './pages/ExplorePage';
 import ProfilePage from './pages/ProfilePage';
 import RequestPage from './pages/RequestPage';
 import RequestMgmtPage from './pages/RequestMgmtPage';
+import ChatPage from './pages/ChatPage';
 
 
 const router = createBrowserRouter([
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: "requestmgmt",
     element: <RequestMgmtPage/>,
+  },
+  {
+    path: "chat",
+    element: <ChatPage/>,
   },
 ]);
 
