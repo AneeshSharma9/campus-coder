@@ -28,11 +28,11 @@ function Navbar() {
             const idToken = await getIdToken();
             if (idToken) {
                 const decodedToken = JSON.parse(atob(idToken.split('.')[1]));
-                console.log(decodedToken);
                 const name = decodedToken.name || 'Unknown';
-                //setLoginLabel('');
+                const nameArray = name.split(" ");
+                let firstname = nameArray[0];
                 setLoginhrefLabel('profile')
-                setLoginLabel(name);
+                setLoginLabel(firstname);
                 setRequestMgmtLabel('Manage Requests')
             } else {
                 setLoginhrefLabel('login')

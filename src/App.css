@@ -259,6 +259,40 @@ html {
   color: var(--accent-col);
 }
 
+.input-wrap {
+  position: relative;
+}
+
+.input-wrap input {
+  color: var(--text-col);
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+  border-bottom: 1px solid #ccc;
+}
+
+.input-wrap label {
+  position: absolute;
+  color: gray;
+  font-size: 18px;
+  font-weight: normal;
+  pointer-events: none;
+  left: 10px;
+  top: 10px;
+  transition: 300ms ease all;
+}
+
+input:focus {
+  outline: none;
+}
+
+.input-wrap input:focus~label,
+.input-wrap input:valid ~ label{
+  top: -20px;
+  font-size: 12px;
+  color: gray;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

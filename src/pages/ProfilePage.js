@@ -34,7 +34,9 @@ function ProfilePage() {
                 const decodedToken = JSON.parse(atob(idToken.split('.')[1]));
                 console.log(decodedToken);
                 const name = decodedToken.name || 'Unknown';
-                setFullName(name);
+                const nameArray = name.split(" ");
+                let firstname = nameArray[0];
+                setFullName(firstname + "!");
             } else {
                 setFullName('Unknown');
             }
@@ -89,17 +91,17 @@ function ProfilePage() {
                     </div>
                     <div className="form-group">
                         <label htmlFor="name">Display Name</label>
-                        <input class="form-control" id="nameInput" aria-describedby="nameHelp" placeholder="Enter name" value={name} onChange={(event) => setName(event.target.value)} />
+                        <input class="form-control" id="nameInput" aria-describedby="nameHelp" placeholder="Display name" value={name} onChange={(event) => setName(event.target.value)} />
                     </div>
                     
                     <div className="form-group">
                         <label htmlFor="Service">Service</label>
-                        <Select options={options} onChange={handleChange} autoFocus={true} />
+                        <Select options={options} onChange={handleChange} autoFocus={true} placeholder="Service"/>
                     </div>
 
                     <div className="form-group">
                         <label htmlFor="description">Description</label>
-                        <input class="form-control" maxlength="41" id="descriptionInput" aria-describedby="descriptionHelp" placeholder="Enter description" value={description} onChange={(event) => setDesc(event.target.value)} />
+                        <input class="form-control" maxlength="41" id="descriptionInput" aria-describedby="descriptionHelp" placeholder="Description" value={description} onChange={(event) => setDesc(event.target.value)} />
                     </div>
                     <button class="primary-button btn btn-primary" type="submit" >Save</button>
                 </form>

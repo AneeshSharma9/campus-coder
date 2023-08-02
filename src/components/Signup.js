@@ -38,32 +38,38 @@ const Signup = () => {
                                     <h2 class="customh1 fw-bold mb-5">Sign up now</h2>
                                     <form onSubmit={onSubmit}>
                                         <div class="row">
-                                            <div class="col-md-6 mb-4">
+                                            <div class="col-md-6 mb-4 input-wrap">
                                                 <div class="form-outline">
-                                                    <input type="text" id="form3Example1" class="form-control" placeholder="First name" value={firstname} onChange={(event) => setFirstName(event.target.value)} />
+                                                    <input required type="text" id="form3Example1" class="form-control" value={firstname} onChange={(event) => setFirstName(event.target.value)} />
+                                                    <label class="pl-3">First name</label>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 mb-4">
+                                            <div class="col-md-6 mb-4 input-wrap">
                                                 <div class="form-outline">
-                                                    <input type="text" id="form3Example2" class="form-control" placeholder="Last name" value={lastname} onChange={(event) => setLastName(event.target.value)} />
+                                                    <input required type="text" id="form3Example2" class="form-control" value={lastname} onChange={(event) => setLastName(event.target.value)} />
+                                                    <label class="pl-3">Last name</label>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="form-outline mb-4">
-                                            <input type="email" id="form3Example3" class="form-control" placeholder="Email" value={email} onChange={(event) => setEmail(event.target.value)}/>
+                                        <div class="form-outline mb-4 input-wrap">
+                                            <input required type="text" id="form3Example3" class="form-control" value={email} onChange={(event) => setEmail(event.target.value)}/>
+                                            <label>Email</label>
                                         </div>
 
-                                        <div class="form-outline mb-4">
-                                            <input type="phonenum" id="form3Example9" class="form-control" placeholder="Phone number (include country code)" value={phonenum} onChange={(event) => setPhoneNum(event.target.value)}/>
+                                        <div class="form-outline mb-4 input-wrap">
+                                            <input required type="phonenum" id="form3Example9" class="form-control" value={phonenum} onChange={(event) => setPhoneNum(event.target.value)}/>
+                                            <label>Phone number (include country code)</label>
                                         </div>
 
-                                        <div class="form-outline mb-4">
-                                            <input type="username" id="form3Example9" class="form-control" placeholder="Username" value={username} onChange={(event) => setUsername(event.target.value)}/>
+                                        <div class="form-outline mb-4 input-wrap">
+                                            <input required type="username" id="form3Example9" class="form-control" value={username} onChange={(event) => setUsername(event.target.value)}/>
+                                            <label>Username</label>
                                         </div>
 
-                                        <div class="form-outline mb-4">
-                                            <input type="password" id="form3Example4" class="form-control" placeholder="Password" value={password} onChange={(event) => setPassword(event.target.value)} />
+                                        <div class="form-outline mb-4 input-wrap">
+                                            <input required type="password" id="form3Example4" class="form-control" value={password} onChange={(event) => setPassword(event.target.value)} />
+                                            <label>Password</label>
                                         </div>
 
                                         {error && ( 

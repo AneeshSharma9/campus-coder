@@ -48,26 +48,27 @@ const Login = () => {
 
                                                 <h5 class="fw-normal mb-3 pb-3 login-spacing">Sign into your account</h5>
 
-                                                <div class="form-outline mb-4">
-                                                    <input
+                                                <div class="form-outline mb-4 input-wrap">
+                                                    <input required
                                                         type="username"
                                                         id="usernameInput"
-                                                        class="form-control form-control-lg"
-                                                        placeholder="Username"
+                                                        class="input-field form-control form-control-lg"
                                                         value={username}
                                                         onChange={(event) => setUsername(event.target.value)}
                                                     />
+                                                    <label>Username</label>
                                                 </div>
-
-                                                <div class="form-outline mb-4">
-                                                    <input
+                                                    
+                
+                                                <div class="form-outline mb-4 input-wrap">
+                                                    <input required
                                                         type="password"
                                                         id="passwordInput"
                                                         class="form-control form-control-lg"
-                                                        placeholder="Password"
                                                         value={password}
                                                         onChange={(event) => setPassword(event.target.value)}
                                                     />
+                                                    <label>Password</label>
                                                 </div>
                                                 {error && (
                                                     <div className="alert alert-danger" role="alert">
