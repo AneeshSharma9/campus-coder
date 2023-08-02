@@ -9,6 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 .App {
@@ -205,6 +206,57 @@ html {
 
 .nav-item-style a:hover{
   opacity:0.5;
+}
+
+.logincard{
+  background-color: var(--bg-gray-col);
+}
+
+.innerlogincard{
+  border-radius: 1rem !important;
+  background-color: var(--bg-gray-col) !important;
+  border: none !important;
+}
+
+.loginimage{
+  border-radius: 1rem 0 0 1rem;
+}
+
+.login-spacing{
+  letter-spacing: 1px;
+}
+
+.login-button-shadow{
+  box-shadow: 0px 8px 9px -4px var(--primary-col);
+}
+
+.cas-right-card{
+  border-radius: 20px !important;
+  background: hsla(0, 0%, 100%, 0.55) !important;
+  backdrop-filter: blur(30px) !important;
+  z-index: 2;
+}
+
+.signupcard-border{
+  border-radius: 20px !important;
+}
+
+.cascading-right {
+  margin-right: -70px;
+}
+
+@media (max-width: 991.98px) {
+  .cascading-right {
+    margin-right: 0;
+  }
+}
+
+.small-link{
+  color: var(--accent-col);
+}
+
+.small-link:hover{
+  color: var(--accent-col);
 }
 
 @keyframes App-logo-spin {
