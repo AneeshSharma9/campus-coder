@@ -81,9 +81,6 @@ html {
   pointer-events: none;
 }
 
-.nav-logo{
-
-}
 
 .login-button {
   padding: 0em 0.5em;
@@ -295,6 +292,16 @@ input:focus {
   top: -20px;
   font-size: 12px;
   color: gray;
+}
+
+.page-item .page-link {
+  color: var(--accent-col) !important;
+}
+
+.page-item.active .page-link{
+  color: white !important;
+  background-color: var(--accent-col) !important;
+  border-color: var(--accent-col) !important;
 }
 
 @keyframes App-logo-spin {

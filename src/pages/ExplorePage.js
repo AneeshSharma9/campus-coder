@@ -8,6 +8,8 @@ function ExplorePage() {
     const [cardsData, setCardsData] = useState([]);
     const [searchWord, setSearchWord] = useState("");
     const [outgoingData, setOutgoingData] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const cardsPerPage = 15;
 
     const fetchDataFromDynamoDb = async (event) => {
         const data = await fetchData('user-table');
@@ -15,19 +17,37 @@ function ExplorePage() {
         setCardsData(data.Items);
         console.log(searchWord)
         console.log(cardsData)
-        const filteredOutgoingData = searchWord !== "" ? data.Items.filter(item => item.service === searchWord) : data.Items;
+        const lowerSearchWord = searchWord.toLowerCase();
+
+        const filteredOutgoingData = searchWord !== ""
+            ? data.Items.filter(item => item.service.toLowerCase().includes(lowerSearchWord))
+            : data.Items;
         setOutgoingData(filteredOutgoingData);
+        setCurrentPage(1);
     };
 
     useEffect(() => {
         fetchDataFromDynamoDb();
         // eslint-disable-next-line
-    }, []);
+    }, [searchWord]);
 
     const navigate = useNavigate();
 
     const toComponentB = (card) => {
         navigate('/request', { state: { card } });
+    }
+
+    const indexOfLastCard = currentPage * cardsPerPage;
+    const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+    const currentCards = outgoingData.slice(indexOfFirstCard, indexOfLastCard);
+
+    const pageNumbers = [];
+    for (let i = 1; i <= Math.ceil(outgoingData.length / cardsPerPage); i++) {
+        pageNumbers.push(i);
+    }
+
+    const clearing = () => {
+        setSearchWord("");
     }
 
     return (
@@ -41,7 +61,8 @@ function ExplorePage() {
                     <div>
                         <div class="form-inline py-3">
                             <input class="form-control mr-sm-2" type="search" placeholder="Search service" value={searchWord} aria-label="Search" onChange={(event) => setSearchWord(event.target.value)} />
-                            <button class="btn btn-outline-success secondary-button my-2 my-sm-0" type="submit" onClick={fetchDataFromDynamoDb}>Search</button>
+                            {/* <button class="btn btn-outline-success secondary-button my-2 my-sm-0" type="submit" onClick={fetchDataFromDynamoDb}>Search</button> */}
+                            <button class="btn btn-outline-success secondary-button my-2 my-sm-0 ml-2" type="submit" onClick={clearing}>Clear</button>
                         </div>
                     </div>
                     <div class="ml-auto p-2">
@@ -50,7 +71,7 @@ function ExplorePage() {
                 </div>
 
                 <div class="d-flex flex-wrap justify-content-start py-2">
-                    {outgoingData.map((card, index) => (
+                    {currentCards.map((card, index) => (
                         <div class="customcard card mr-3 my-3" style={{ width: "22rem" }} key={index}>
                             <div className="card-body">
                                 <h5 className="card-title">{card.name}</h5>
@@ -61,6 +82,16 @@ function ExplorePage() {
                         </div>
                     ))}
                 </div>
+
+                <nav aria-label="Page navigation" class="p-4">
+                    <ul className="pagination justify-content-center">
+                        {pageNumbers.map((number) => (
+                            <li key={number} className={`page-item ${currentPage === number ? 'active custombg' : ''}`}>
+                                <button className="page-link" onClick={() => setCurrentPage(number)}>{number}</button>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
 
             </div>
 
