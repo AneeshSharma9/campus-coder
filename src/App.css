@@ -47,13 +47,8 @@ html {
   align-items: center;
 }
 
-.title{
-  color: var(--text-col);
-  font-size: 60px;
-  letter-spacing: -1px;
-  font-weight: 700;
-  margin-top: 2%;
-  margin-bottom: 2%;
+.image-container {
+  position: relative;
 }
 
 .customh1 {
@@ -67,20 +62,68 @@ html {
 
 .customh2{
   color: var(--text-col);
-  font-size: 30px;
+  font-size: 2.5vw;
   letter-spacing: -2px;
   font-weight: 700;
   margin-top: 2%;
   margin-bottom: 2%;
 }
 
+
 .logo {
   color: var(--text-col);
   font-weight: 700;
-  font-size: 30px;
-  pointer-events: none;
+  font-size: 3.5vmin;
 }
 
+.logo:hover{
+  text-decoration: none;
+  color: var(--text-col);
+}
+
+.title{
+  position: absolute;
+  filter: invert(100%);
+  font-size: 5.0vmax;
+  letter-spacing: -1px;
+  font-weight: 700;
+  top: 20%;
+  left: 5%;
+  z-index: 1;
+}
+
+.tagline{
+  position: absolute;
+  filter: invert(100%);
+  font-size: 2.0vmax;
+  letter-spacing: -1px;
+  font-weight: normal;
+  top: 35%;
+  left: 5%;
+  z-index: 1;
+}
+
+.homepage-button1{
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  z-index: 1;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.homepage-button2{
+  position: absolute;
+  top: 50%;
+  left: 13%;
+  z-index: 1;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
 
 .login-button {
   padding: 0em 0.5em;
