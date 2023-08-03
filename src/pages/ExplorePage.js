@@ -3,8 +3,11 @@ import { Account } from "../components/Account"
 import Navbar from '../components/Navbar'
 import { fetchData } from '../AwsFunctions';
 import { useNavigate } from 'react-router-dom';
+import Pool from "../UserPool"
 
 function ExplorePage() {
+    const user = Pool.getCurrentUser();
+
     const [cardsData, setCardsData] = useState([]);
     const [searchWord, setSearchWord] = useState("");
     const [outgoingData, setOutgoingData] = useState([]);
@@ -61,12 +64,13 @@ function ExplorePage() {
                     <div>
                         <div class="form-inline py-3">
                             <input class="form-control mr-sm-2" type="search" placeholder="Search service" value={searchWord} aria-label="Search" onChange={(event) => setSearchWord(event.target.value)} />
-                            {/* <button class="btn btn-outline-success secondary-button my-2 my-sm-0" type="submit" onClick={fetchDataFromDynamoDb}>Search</button> */}
                             <button class="btn btn-outline-success secondary-button my-2 my-sm-0 ml-2" type="submit" onClick={clearing}>Clear</button>
                         </div>
                     </div>
                     <div class="ml-auto p-2">
-                        <a class="secondary-button btn btn-outline-success my-2 my-sm-0" href="profile">+</a>
+                        {user ? (
+                            <a class="secondary-button btn btn-outline-success my-2 my-sm-0" href="profile">+</a>
+                        ) : null}
                     </div>
                 </div>
 
