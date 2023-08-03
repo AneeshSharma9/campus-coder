@@ -1,5 +1,7 @@
 import React, { useContext, useState } from "react";
 import { AccountContext } from "./Account";
+import logo from '../public/campus_coder_logo_temp.png'
+
 /* import UserPool from "../UserPool"
 import {CognitoUser, AuthenticationDetails} from "amazon-cognito-identity-js"; */
 
@@ -41,9 +43,9 @@ const Login = () => {
                                     <div class="col-md-6 col-lg-7 d-flex align-items-center">
                                         <div class="card-body text-black pr-5">
                                             <form onSubmit={onSubmit}>
-                                                <div class="d-flex align-items-center mb-3 pb-1">
-                                                    <i class="fas fa-cubes fa-2x me-3"></i>
-                                                    <span class="customh1 mb-0">Campus Coder</span>
+                                                <div class="d-flex align-items-center align-self-center mb-3 pb-1">
+                                                    <img src={logo} alt="Logo" class="" width={65} />
+                                                    <h1 class="customh1 ml-3">Campus Coder</h1>
                                                 </div>
 
                                                 <h5 class="fw-normal mb-3 pb-3 login-spacing">Sign into your account</h5>
@@ -58,8 +60,8 @@ const Login = () => {
                                                     />
                                                     <label>Username</label>
                                                 </div>
-                                                    
-                
+
+
                                                 <div class="form-outline mb-4 input-wrap">
                                                     <input required
                                                         type="password"
