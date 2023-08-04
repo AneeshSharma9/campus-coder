@@ -60,9 +60,9 @@ function Navbar() {
                     <li class="nav-item nav-item-style">
                         <a class="navcolor nav-link pr-4 pl-4" href="explore">Explore</a>
                     </li>
-                    <li class="nav-item nav-item-style mr-4">
+                    <li class="nav-item nav-item-style">
                         {user ? (
-                            <a class="navcolor nav-link" href="requestmgmt">Manage Requests</a>
+                            <a class="navcolor nav-link pr-4 pl-4" href="requestmgmt">Manage Requests</a>
                         ) : null}
                     </li>
                     <li class="login-button mr-4">
