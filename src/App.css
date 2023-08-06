@@ -127,35 +127,65 @@ html {
 
 .homepage-card-container{
   display: flex;
+  flex-wrap: wrap;
   margin-left: 5%;
   margin-right: 5%;
 }
 
 .homepage-card{
+  flex: 1 1 20%;
   margin-left: 1%;
   margin-right: 1%;
-  flex-basis: 100%;
   background-color: var(--bg-gray-col) !important;
   border: none !important;
   border-radius: 6px !important;
 }
 
-.faq{
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 2%;
-  background-color: var(--secondary-col);
-  padding: 1em 2em;
-  border-radius: 6px;
-  overflow: hidden;
-  height: auto;
-  max-height: 80px;
+@media (max-width: 1000px) {
+  .homepage-card {
+    flex-basis: 100%;
+    margin-bottom: 2%;
+  }
 }
 
-.faq.expand{
-  transition: max-height 0.5s cubic-bezier(0, 0, 0, 0);
-  max-height: 500px;
+.section-bg{
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: var(--accent-col);
+  color: var(--secondary-col);
+  border-radius: 6px !important;
 }
+
+.section-bg .customh2{
+  color: var(--secondary-col) !important;
+}
+
+.faq{
+  margin-left: 10% !important;
+  margin-right: 10% !important;
+  padding-bottom: 5% !important;
+  text-decoration: none;
+}
+
+.faq-item{
+  margin-bottom: 2% !important;
+  text-decoration: none;
+  background: var(--secondary-col);
+  border: none;
+}
+
+.card-header{
+  border: none !important;
+  background: var(--secondary-col);
+}
+
+.faq-item button{
+  color: var(--text-col) !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  font-size: 1.2vmax !important;
+}
+
 
 .login-button {
   padding: 0em 0.5em;
@@ -231,7 +261,7 @@ html {
 
 .introtext {
   font-weight: normal;
-  font-size: 20px;
+  font-size: 1.2vmax;
   letter-spacing: normal;
   line-height: 150%;
   margin-left: 5%;

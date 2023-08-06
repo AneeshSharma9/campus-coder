@@ -20,41 +20,46 @@ import ChatPage from './pages/ChatPage';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
   },
   {
     path: "login",
-    element: <LoginPage/>,
+    element: <LoginPage />,
   },
   {
     path: "signup",
-    element: <SignupPage/>,
+    element: <SignupPage />,
   },
   {
     path: "explore",
-    element: <ExplorePage/>,
+    element: <ExplorePage />,
   },
   {
     path: "profile",
-    element: <ProfilePage/>,
+    element: <ProfilePage />,
   },
   {
     path: "request",
-    element: <RequestPage/>,
+    element: <RequestPage />,
   },
   {
     path: "requestmgmt",
-    element: <RequestMgmtPage/>,
+    element: <RequestMgmtPage />,
   },
   {
     path: "chat",
-    element: <ChatPage/>,
+    element: <ChatPage />,
   },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <RouterProvider router={router}/>
+  <div>
+    
+    <RouterProvider router={router} />
+
+  </div>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
