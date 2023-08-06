@@ -179,6 +179,8 @@ html {
 .card-header{
   border: none !important;
   background: var(--secondary-col);
+  border-radius: 6px !important;
+
 }
 
 .faq-item button{

@@ -146,13 +146,13 @@ function App() {
                     <div class="card faq-item">
                         <div class="card-header" id="headingOne">
                             <h5 class="mb-0">
-                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                <button class="btn btn-link w-100 h-100 text-left" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                     How does Campus Coder ensure the quality of work delivered by students?
                                 </button>
                             </h5>
                         </div>
 
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body">
                                 We maintain a rigorous selection process for our student developers, ensuring they possess the necessary skills and expertise. Additionally, we encourage businesses to provide feedback on the projects, and our team offers support and guidance throughout the development process.
                             </div>
@@ -161,7 +161,7 @@ function App() {
                     <div class="card faq-item">
                         <div class="card-header" id="headingTwo">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <button class="btn btn-link collapsed w-100 h-100 text-left" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                     What types of projects can I request on Campus Coder?
                                 </button>
                             </h5>
@@ -175,7 +175,7 @@ function App() {
                     <div class="card faq-item">
                         <div class="card-header" id="headingThree">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <button class="btn btn-link collapsed w-100 h-100 text-left" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                     How are projects priced on Campus Coder?
                                 </button>
                             </h5>
@@ -189,7 +189,7 @@ function App() {
                     <div class="card faq-item">
                         <div class="card-header" id="headingFour">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <button class="btn btn-link collapsed w-100 h-100 text-left" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                     Can I hire a student developer for a long-term project?
                                 </button>
                             </h5>
