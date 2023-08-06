@@ -45,7 +45,7 @@ function Navbar() {
 
     return (
 
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-bg fixed-top navbar-expand-lg navbar-light">
             <div class="pl-3">
                 <a href="/">
                     <img src={logo} alt="Logo" class="" width={50} />
