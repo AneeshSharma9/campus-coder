@@ -47,6 +47,14 @@ html {
   align-items: center;
 }
 
+.offset{
+  padding: 40px;
+}
+
+.homepage-offset{
+  padding-top: 50px;
+}
+
 .image-container {
   position: relative;
 }

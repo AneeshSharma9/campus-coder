@@ -56,7 +56,7 @@ function ExplorePage() {
     return (
         <Account>
             <Navbar />
-
+            <div class="offset"></div>
             <div class="container">
                 <h1 class="customh1">Browse Services</h1>
                 <div class="d-flex">

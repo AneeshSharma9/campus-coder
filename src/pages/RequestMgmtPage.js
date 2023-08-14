@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 function RequestMgmtPage() {
     const [tableData, setTableData] = useState([]);
     const [outgoingData, setOutgoingData] = useState([]);
-
+    const [link, setLink] = useState("");
 
     const user = Pool.getCurrentUser().getUsername();
 
@@ -35,14 +35,12 @@ function RequestMgmtPage() {
 
     const handleAccept = async (username) => {
         try {
-            // Update the record associated with the given username
             const updateExpression = "SET accepted = :accepted";
             const expressionAttributeValues = { ":accepted": "accepted" };
 
             await updateData('outgoing-requests', { username }, updateExpression, expressionAttributeValues);
             console.log(`Record with username ${username} updated successfully`);
 
-            // Refresh the data after update
             fetchDataFromDynamoDb();
         } catch (error) {
             console.log('Error updating record:', error);
@@ -60,6 +58,14 @@ function RequestMgmtPage() {
         navigate('/chat', { state: { username } });
     }
 
+    const checkLink = () => {
+        if (!link.includes("https://github.com")){
+            console.log('false')
+        }else{
+            console.log('true')
+        }
+    }
+
     return (
         <Account>
             <Navbar />
@@ -73,9 +79,9 @@ function RequestMgmtPage() {
                             <th scope="col">Service</th>
                             <th scope="col">Directions</th>
                             <th scope="col">End Date</th>
-                            <th scope="col">Contact</th>
                             <th scope="col">Chat</th>
                             <th scope="col">Accepted</th>
+                            <th scope="col">Submit</th>
                         </tr>
                     </thead>
                     <tbody class="">
@@ -85,14 +91,8 @@ function RequestMgmtPage() {
                                 <td>{item.service}</td>
                                 <td>{item.directions}</td>
                                 <td>{item.endDate}</td>
-                                <td>{item.accepted === "false" ? (
-                                        <label>N/A until accepted</label>
-                                    ) : (
-                                        <label>{item.contact}</label>
-                                    )}
-                                </td>
                                 <td>
-                                    <button onClick={() => { toComponentB(item.username) }} className="secondary-button btn">Chat</button>
+                                    <button onClick={() => { toComponentB(item.username) }} className="secondary-button btn">Message</button>
                                 </td>
                                 <td>
                                     {item.accepted === "false" ? (
@@ -102,6 +102,46 @@ function RequestMgmtPage() {
                                         </>
                                     ) : (
                                         <label>{item.accepted}</label>
+                                    )}
+                                </td>
+                                <td>
+                                    {item.accepted === "false" ? (
+                                        <>
+                                            <label>N/A until accepted</label>
+                                        </>
+                                    ) : (
+                                        <div>
+                                            <button type="button" className="secondary-button btn" data-toggle="modal" data-target="#exampleModal">Github Link</button>
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Github Project Link</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="form-outline m-4 input-wrap">
+                                                            <input required
+                                                                type="link"
+                                                                id="linkInput"
+                                                                class="input-field form-control form-control-lg"
+                                                                value={link}
+                                                                onChange={(event) => setLink(event.target.value)}
+                                                            />
+                                                            <label>Link</label>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn secondary-button" data-dismiss="modal">Close</button>
+                                                            <button onClick={checkLink} type="button" class="btn primary-button">Save changes</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
                                     )}
                                 </td>
                             </tr>
@@ -133,7 +173,7 @@ function RequestMgmtPage() {
                                 <td>{item.endDate}</td>
                                 <td>{item.accepted}</td>
                                 <td>
-                                    <button onClick={() => { toComponentB(item.requested) }} className="secondary-button btn">Chat</button>
+                                    <button onClick={() => { toComponentB(item.requested) }} className="secondary-button btn">Message</button>
                                 </td>
                                 <td><button onClick={() => handleDelete(item.username)} class="btn btn-outline-danger">❌</button></td>
                             </tr>

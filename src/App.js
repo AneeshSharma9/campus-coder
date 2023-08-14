@@ -28,8 +28,8 @@ function App() {
                         </a>
                     </div>
                 </div>
-
-                <h2 class="customh2 text-center" id="about">About Campus Coder</h2>
+                <div id="about"></div>
+                <h2 class="customh2 text-center homepage-offset" >About Campus Coder</h2>
                 <div class="" >
                     <p class="introtext">
                         Campus Coder bridges businesses and young tech minds, sparking innovation and unleashing boundless possibilities. We empower small businesses by connecting them with talented computer science students, providing cost-effective solutions while nurturing the next generation of tech leaders. Join our vibrant community of visionaries and changemakers today!
@@ -70,8 +70,9 @@ function App() {
                     </div>
                 </div>
 
+                <div class="homepage-offset" id="how"></div>
                 <div class="section-bg">
-                    <h2 class="customh2 text-center pt-5" id="how">
+                    <h2 class="customh2 text-center pt-5" >
                         How Does it Work?
                     </h2>
                     <p class="introtext">
