@@ -8,7 +8,6 @@ import { useNavigate } from 'react-router-dom';
 
 function TasksPage() {
     const [tableData, setTableData] = useState([]);
-    const [outgoingData, setOutgoingData] = useState([]);
     const [link, setLink] = useState("");
 
     const user = Pool.getCurrentUser().getUsername();
@@ -18,8 +17,6 @@ function TasksPage() {
         console.log(data.Items);
         const filteredData = data.Items.filter(item => item.requested === user);
         setTableData(filteredData);
-        const filteredOutgoingData = data.Items.filter(item => item.username === user);
-        setOutgoingData(filteredOutgoingData);
     };
 
     const handleDelete = async (username) => {

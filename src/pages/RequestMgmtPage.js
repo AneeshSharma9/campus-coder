@@ -1,23 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Account } from '../components/Account'
 import Navbar from '../components/Navbar'
-import { fetchData, deleteData, updateData } from '../AwsFunctions';
+import { fetchData, deleteData } from '../AwsFunctions';
 import Pool from '../UserPool';
 import { useNavigate } from 'react-router-dom';
 
 
 function RequestMgmtPage() {
-    const [tableData, setTableData] = useState([]);
     const [outgoingData, setOutgoingData] = useState([]);
-    const [link, setLink] = useState("");
-
     const user = Pool.getCurrentUser().getUsername();
 
     const fetchDataFromDynamoDb = async () => {
         const data = await fetchData('outgoing-requests');
         console.log(data.Items);
-        const filteredData = data.Items.filter(item => item.requested === user);
-        setTableData(filteredData);
         const filteredOutgoingData = data.Items.filter(item => item.username === user);
         setOutgoingData(filteredOutgoingData);
     };
@@ -32,21 +27,6 @@ function RequestMgmtPage() {
         }
     };
 
-
-    const handleAccept = async (username) => {
-        try {
-            const updateExpression = "SET accepted = :accepted";
-            const expressionAttributeValues = { ":accepted": "accepted" };
-
-            await updateData('outgoing-requests', { username }, updateExpression, expressionAttributeValues);
-            console.log(`Record with username ${username} updated successfully`);
-
-            fetchDataFromDynamoDb();
-        } catch (error) {
-            console.log('Error updating record:', error);
-        }
-    };
-
     useEffect(() => {
         fetchDataFromDynamoDb();
         // eslint-disable-next-line
@@ -56,14 +36,6 @@ function RequestMgmtPage() {
 
     const toComponentB = (username) => {
         navigate('/chat', { state: { username } });
-    }
-
-    const checkLink = () => {
-        if (!link.includes("https://github.com")){
-            console.log('false')
-        }else{
-            console.log('true')
-        }
     }
 
     return (
