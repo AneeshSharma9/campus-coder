@@ -10,10 +10,12 @@
 html {
   scroll-behavior: smooth;
   height: 100%;
+  
 }
 
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -25,6 +27,10 @@ html {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.status-logout{
+  cursor: pointer;
 }
 
 .App-header {

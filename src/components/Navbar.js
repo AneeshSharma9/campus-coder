@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Pool from "../UserPool";
 import logo from "../public/campus_coder_logo_temp.png";
+import Status from "../components/Status"
+
 
 function Navbar() {
     const user = Pool.getCurrentUser();
@@ -51,7 +53,7 @@ function Navbar() {
                     <img src={logo} alt="Logo" class="" width={50} />
                 </a>
             </div>
-            <a class="logo ml-4" href="/">
+            <a class="logo pl-4" href="/">
                 Campus Coder
             </a>
             <button
@@ -85,11 +87,24 @@ function Navbar() {
                             </a>
                         ) : null}
                     </li>
-                    <li class="login-button mr-4 ml-4">
-                        <a class="colorchange nav-link " href={loginhrefLabel}>
-                            {loginLabel}
-                        </a>
-                    </li>
+                    {user ? (
+                        <li class="nav-item dropdown nav-item-style">
+                            <a class="navcolor nav-link dropdown-toggle" href="#/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {loginLabel}
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/profile">Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <Status class="dropdown-item"/>
+                            </div>
+                        </li>
+
+                    ) : (
+                        <li class="login-button mr-4 ml-4">
+                            <a class="colorchange nav-link " href={loginhrefLabel}>Log In</a>
+                        </li>
+
+                    )}
                 </ul>
             </div>
         </nav>

@@ -29,9 +29,9 @@ function App() {
                     </div>
                 </div>
                 <div id="about"></div>
-                <h2 class="customh2 text-center homepage-offset" >About Campus Coder</h2>
-                <div class="" >
-                    <p class="introtext">
+                <div class="section-bg" >
+                    <h2 class="customh2 text-center homepage-offset " >About Campus Coder</h2>
+                    <p class="introtext pb-5">
                         Campus Coder bridges businesses and young tech minds, sparking innovation and unleashing boundless possibilities. We empower small businesses by connecting them with talented computer science students, providing cost-effective solutions while nurturing the next generation of tech leaders. Join our vibrant community of visionaries and changemakers today!
                     </p>
                 </div>

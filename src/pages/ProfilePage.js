@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Account } from '../components/Account'
 import Navbar from '../components/Navbar'
-import Status from "../components/Status"
 import Pool from "../UserPool"
 import { putData } from '../AwsFunctions';
 import Select from "react-select";
@@ -105,7 +104,6 @@ function ProfilePage() {
                     <button class="primary-button btn btn-primary" type="submit" >Save</button>
                 </form>
                 <hr />
-                <Status />
             </div>
 
         </Account>

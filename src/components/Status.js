@@ -21,7 +21,7 @@ const Status = () => {
         window.location.href = "login";
     };
 
-    return <div>{status ? <button class="secondary-button btn btn-warning" onClick={handleLogout}>Logout</button> : "Not logged in"}</div>
+    return <div class="status-logout">{status ? <a href="/login" class="dropdown-item" onClick={handleLogout}>Logout</a> : "Not logged in"}</div>
 }
 
 export default Status;
