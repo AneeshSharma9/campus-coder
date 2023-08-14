@@ -80,13 +80,6 @@ function Navbar() {
                             Explore
                         </a>
                     </li>
-                    <li class="nav-item nav-item-style">
-                        {user ? (
-                            <a class="navcolor nav-link pr-4 pl-4" href="requestmgmt">
-                                Manage Requests
-                            </a>
-                        ) : null}
-                    </li>
                     {user ? (
                         <li class="nav-item dropdown nav-item-style">
                             <a class="navcolor nav-link dropdown-toggle" href="#/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -94,6 +87,8 @@ function Navbar() {
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/profile">Profile</a>
+                                <a class="dropdown-item" href="/tasks">Tasks</a>
+                                <a class="dropdown-item" href="/requestmgmt">Your Requests</a>
                                 <div class="dropdown-divider"></div>
                                 <Status class="dropdown-item"/>
                             </div>

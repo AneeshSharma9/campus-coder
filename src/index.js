@@ -14,7 +14,7 @@ import ProfilePage from './pages/ProfilePage';
 import RequestPage from './pages/RequestPage';
 import RequestMgmtPage from './pages/RequestMgmtPage';
 import ChatPage from './pages/ChatPage';
-
+import TasksPage from './pages/TasksPage';
 
 
 const router = createBrowserRouter([
@@ -49,6 +49,10 @@ const router = createBrowserRouter([
   {
     path: "chat",
     element: <ChatPage />,
+  },
+  {
+    path: "tasks",
+    element: <TasksPage />,
   },
 ]);
 

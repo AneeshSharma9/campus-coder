@@ -103,7 +103,6 @@ function ProfilePage() {
                     </div>
                     <button class="primary-button btn btn-primary" type="submit" >Save</button>
                 </form>
-                <hr />
             </div>
 
         </Account>
