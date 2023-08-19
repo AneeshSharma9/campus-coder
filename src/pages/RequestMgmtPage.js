@@ -38,6 +38,10 @@ function RequestMgmtPage() {
         navigate('/chat', { state: { username } });
     }
 
+    const toCheckout = (item) => {
+        navigate('/checkout', { state: { item } });
+    }
+
     return (
         <Account>
             <Navbar />
@@ -53,6 +57,7 @@ function RequestMgmtPage() {
                             <th scope="col">End Date</th>
                             <th scope="col">Accepted</th>
                             <th scope="col">Chat</th>
+                            <th scope="col">Approve and Pay</th>
                             <th scope="col">Delete</th>
                         </tr>
                     </thead>
@@ -67,6 +72,7 @@ function RequestMgmtPage() {
                                 <td>
                                     <button onClick={() => { toComponentB(item.requested) }} className="secondary-button btn">Message</button>
                                 </td>
+                                <td><button onClick={() => toCheckout(item)} class="btn btn-outline-success">Pay</button></td>
                                 <td><button onClick={() => handleDelete(item.username)} class="btn btn-outline-danger">❌</button></td>
                             </tr>
                         ))}

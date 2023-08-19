@@ -1,4 +1,4 @@
-# **Campus Coder**
+# **Propel**
 
 ## 🔗 Links
 Access front-end: https://campus-coder.netlify.app/

@@ -15,7 +15,7 @@ function App() {
                         class="w-100"
                         alt=""
                     />
-                    <span class="title">Campus Coder</span>
+                    <span class="title">Propel</span>
                     <span class="tagline">Spark innovation together.</span>
                     <div class="main-button homepage-button1">
                         <a class="colorchange nav-link" href="#about">
@@ -30,17 +30,17 @@ function App() {
                 </div>
                 <div id="about"></div>
                 <div class="section-bg" >
-                    <h2 class="customh2 text-center homepage-offset " >About Campus Coder</h2>
+                    <h2 class="customh2 text-center homepage-offset " >About Propel</h2>
                     <p class="introtext pb-5">
-                        Campus Coder bridges businesses and young tech minds, sparking innovation and unleashing boundless possibilities. We empower small businesses by connecting them with talented computer science students, providing cost-effective solutions while nurturing the next generation of tech leaders. Join our vibrant community of visionaries and changemakers today!
+                        Propel bridges businesses and young tech minds, sparking innovation and unleashing boundless possibilities. We empower small businesses by connecting them with talented computer science students, providing cost-effective solutions while nurturing the next generation of tech leaders. Join our vibrant community of visionaries and changemakers today!
                     </p>
                 </div>
 
-                <h2 class="customh2 text-center">Why Campus Coder?</h2>
+                <h2 class="customh2 text-center">Why Propel?</h2>
                 <div class="homepage-card-container">
                     <div class="card homepage-card p-5">
                         <h5 className="card-title text-center mb-4">Cost-Effective Solutions</h5>
-                        <p>Campus Coder offers a unique opportunity
+                        <p>Propel offers a unique opportunity
                             for small businesses to access top-notch development services
                             without breaking the bank. By working with talented computer science
                             students, you can benefit from cost-effective solutions tailored to
@@ -48,7 +48,7 @@ function App() {
                     </div>
                     <div class="card homepage-card p-5">
                         <h5 className="card-title text-center mb-4">Supporting Aspiring Developers</h5>
-                        <p>When you choose Campus Coder, you're
+                        <p>When you choose Propel, you're
                             not just getting a service; you're investing in the future of the
                             tech industry. By collaborating with enthusiastic students, you play
                             a crucial role in nurturing their skills and fostering their growth
@@ -63,7 +63,7 @@ function App() {
                     </div>
                     <div class="card homepage-card p-5">
                         <h5 className="card-title text-center mb-4">Empowering Collaboration</h5>
-                        <p>Campus Coder facilitates a vibrant
+                        <p>Propel facilitates a vibrant
                             community of businesses and students, encouraging collaboration and
                             innovation. Together, we work towards creating solutions that drive
                             positive change and impact.</p>
@@ -76,14 +76,14 @@ function App() {
                         How Does it Work?
                     </h2>
                     <p class="introtext">
-                        Business Registration: To get started with Campus Coder, small
+                        Business Registration: To get started with Propel, small
                         businesses need to register on our platform. The registration
                         process is simple and requires basic information about your company
                         and the type of project you need assistance with.
                         <br />
                         <br />
                         Project Submission: After registering, businesses can submit their
-                        projects through the Campus Coder dashboard. Clearly outline the
+                        projects through the Propel dashboard. Clearly outline the
                         project's scope, requirements, and any specific skills you're
                         looking for in a student developer.
                         <br />
@@ -134,7 +134,7 @@ function App() {
                         Long-Term Collaboration: If you had a positive experience with a
                         particular student developer, you can choose to work with them on
                         future projects or hire them for long-term development support.
-                        Campus Coder aims to build lasting connections between businesses
+                        Propel aims to build lasting connections between businesses
                         and talented students.
                         <br />
                         <br />
@@ -148,7 +148,7 @@ function App() {
                         <div class="card-header" id="headingOne">
                             <h5 class="mb-0">
                                 <button class="btn btn-link w-100 h-100 text-left" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    How does Campus Coder ensure the quality of work delivered by students?
+                                    How does Propel ensure the quality of work delivered by students?
                                 </button>
                             </h5>
                         </div>
@@ -163,13 +163,13 @@ function App() {
                         <div class="card-header" id="headingTwo">
                             <h5 class="mb-0">
                                 <button class="btn btn-link collapsed w-100 h-100 text-left" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    What types of projects can I request on Campus Coder?
+                                    What types of projects can I request on Propel?
                                 </button>
                             </h5>
                         </div>
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                             <div class="card-body">
-                                Campus Coder offers a wide range of services, including website development, automation scripts, and tackling small tasks. Whatever your tech-related needs are, our talented students are eager to take on the challenge.
+                                Propel offers a wide range of services, including website development, automation scripts, and tackling small tasks. Whatever your tech-related needs are, our talented students are eager to take on the challenge.
                             </div>
                         </div>
                     </div>
@@ -177,13 +177,13 @@ function App() {
                         <div class="card-header" id="headingThree">
                             <h5 class="mb-0">
                                 <button class="btn btn-link collapsed w-100 h-100 text-left" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    How are projects priced on Campus Coder?
+                                    How are projects priced on Propel?
                                 </button>
                             </h5>
                         </div>
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                             <div class="card-body">
-                                Projects on Campus Coder are priced at a fraction of the cost of professional services. The exact pricing depends on the complexity and scope of the project. Our aim is to provide affordable solutions for small businesses while ensuring fair compensation for the students' efforts.
+                                Projects on Propel are priced at a fraction of the cost of professional services. The exact pricing depends on the complexity and scope of the project. Our aim is to provide affordable solutions for small businesses while ensuring fair compensation for the students' efforts.
                             </div>
                         </div>
                     </div>
@@ -197,7 +197,7 @@ function App() {
                         </div>
                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                             <div class="card-body">
-                                Absolutely! Campus Coder welcomes both short-term and long-term projects. Whether you need a one-time task or ongoing development support, our students are ready to collaborate according to your project requirements.
+                                Absolutely! Propel welcomes both short-term and long-term projects. Whether you need a one-time task or ongoing development support, our students are ready to collaborate according to your project requirements.
                             </div>
                         </div>
                     </div>

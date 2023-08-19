@@ -54,7 +54,7 @@ function Navbar() {
                 </a>
             </div>
             <a class="logo pl-4" href="/">
-                Campus Coder
+                Propel
             </a>
             <button
                 class="navbar-toggler"

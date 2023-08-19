@@ -36,7 +36,7 @@ const Login = () => {
                                 <div class="card-body p-5 shadow-5 text-center align-self-center">
                                     <div class="d-flex align-items-center align-self-center mb-3 pb-1">
                                         <img src={logo} alt="Logo" class="" width={65} />
-                                        <h1 class="customh1 ml-3">Campus Coder</h1>
+                                        <h1 class="customh1 ml-3">Propel</h1>
                                     </div>
 
                                     <h5 class="fw-normal mb-3 pb-3 login-spacing">Sign into your account</h5>
