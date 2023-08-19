@@ -1,7 +1,7 @@
 # **Propello**
 
 ## 🔗 Links
-Access front-end: https://campus-coder.netlify.app/
+Access front-end: https://propello.netlify.app/
 
 ## 📜 Description
 Service providing small businesses with affordable software development offered by university students looking to gain experience
